@@ -22,9 +22,9 @@ Grundsätzlich beinhaltet dies folgende Punkte
 * Neues Android Projekt erstellen. SDK installieren falls nicht vorhanden. Ausprobieren obs startet
 * Sicherstellen das JDK 1.8 installiert ist (allenfalls unter Tools => Options => Xamarin => Android Options) ändern
 
-Installationsdokumentation von Xamarin mit Visual Studio 2015:
+Visual Studio 2017 RC (für die "Mutigen" release date 7. März) 
+https://www.visualstudio.com/de/vs/visual-studio-2017-rc/
+
+Oder Installationsdokumentation von Xamarin mit Visual Studio 2015:
 https://developer.xamarin.com/guides/android/getting_started/installation/windows/
 Hilfestellung: https://msdn.microsoft.com/en-us/library/mt613162.aspx
-
-Oder Visual Studio 2017 RC:
-https://www.visualstudio.com/de/vs/visual-studio-2017-rc/
