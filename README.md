@@ -16,8 +16,15 @@
 
 Für iOS wird ein OS X benötigt. Darum wird auf Windows nur Android installiert. Ich werde in der Vorlesung jedoch noch zeigen wie man auf Windows (mithilfe eines Macs) sogar iOS Applikationen starten kann.
 
-Installationsdokumentation von Xamarin: https://developer.xamarin.com/guides/android/getting_started/installation/windows/
 
 Grundsätzlich beinhaltet dies folgende Punkte
 * Visual Studio installieren. Wichtig: Dabei die Xamarin Cross Platform Tools auswählen im Dialog wo man die einzelnen Funktionen auswählen kann.
 * Neues Android Projekt erstellen. SDK installieren falls nicht vorhanden. Ausprobieren obs startet
+* Sicherstellen das JDK 1.8 installiert ist (allenfalls unter Tools => Options => Xamarin => Android Options) ändern
+
+Installationsdokumentation von Xamarin mit Visual Studio 2015:
+https://developer.xamarin.com/guides/android/getting_started/installation/windows/
+Hilfestellung: https://msdn.microsoft.com/en-us/library/mt613162.aspx
+
+Oder Visual Studio 2017 RC:
+https://www.visualstudio.com/de/vs/visual-studio-2017-rc/
