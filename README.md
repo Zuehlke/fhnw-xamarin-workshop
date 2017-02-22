@@ -1,7 +1,6 @@
 # Xamarin Installation
 
-**Ziel**
-Hello World Applikation läuft so dass das Notebook bereit ist für die nächsten Lektionen.
+> **Ziel:** Hello World Applikation läuft so dass das Notebook bereit ist für die nächsten Lektionen.
 
 ## Mac
 
