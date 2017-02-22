@@ -20,5 +20,4 @@ Installationsdokumentation von Xamarin: https://developer.xamarin.com/guides/and
 
 Grundsätzlich beinhaltet dies folgende Punkte
 * Visual Studio installieren. Wichtig: Dabei die Xamarin Cross Platform Tools auswählen im Dialog wo man die einzelnen Funktionen auswählen kann.
-* http://www.xamarin.com/download herunterladen und installieren
-* Neues Projekt erstellen & ausprobieren obs startet
+* Neues Android Projekt erstellen. SDK installieren falls nicht vorhanden. Ausprobieren obs startet
