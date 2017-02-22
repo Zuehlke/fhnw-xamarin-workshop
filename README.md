@@ -18,17 +18,20 @@ Für iOS wird ein OS X benötigt. Darum wird auf Windows nur Android installiert
 
 
 Grundsätzlich beinhaltet dies folgende Punkte
-* Visual Studio installieren. Wichtig: Dabei die Xamarin Cross Platform Tools auswählen im Dialog wo man die einzelnen Funktionen auswählen kann.
+* Visual Studio installieren. Wichtig: Dabei die Xamarin Cross Platform Tools auswählen im Dialog wo man die einzelnen Funktionen auswählen kann. (Hilfe in den Links unten)
 * Neues Android Projekt erstellen. SDK installieren falls nicht vorhanden. Ausprobieren obs startet
 * Sicherstellen das JDK 1.8 installiert ist (allenfalls unter Tools => Options => Xamarin => Android Options) ändern
 
-Visual Studio 2017 RC (für die "Mutigen" release date 7. März) 
-
-https://www.visualstudio.com/de/vs/visual-studio-2017-rc/
-
-Oder Installationsdokumentation von Xamarin mit Visual Studio 2015:
+Installationsdokumentation von Xamarin mit Visual Studio 2015:
 
 https://developer.xamarin.com/guides/android/getting_started/installation/windows/
 Hilfestellung: 
 
 https://msdn.microsoft.com/en-us/library/mt613162.aspx
+
+### Für die mutigen & bleeding edge fans
+Visual Studio 2017 RC (für die "Mutigen" release date 7. März) 
+
+https://www.visualstudio.com/de/vs/visual-studio-2017-rc/
+
+
