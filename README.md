@@ -1,9 +1,12 @@
 # Xamarin Installation
 
+*Ziel*
+Hello World Applikation läuft so dass das Notebook bereit ist für die nächsten Lektionen.
+
 ## Mac
 
 * XCode aus AppStore installieren
-* Xamarin Studio installieren: http://www.xamarin.com/download)
+* Xamarin Studio installieren: http://www.xamarin.com/download
 * Xamarin Installationsdokumentation: https://developer.xamarin.com/guides/android/getting_started/installation/mac/
 * Xamarin Studio Starten: Tools -> SDK Manager -> API 24 Komponenten installieren
 * Ein neues Hello World Projekt erstellen: File -> New Solution -> Multiplatofrm -> App -> Single View App
