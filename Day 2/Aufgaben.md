@@ -3,7 +3,7 @@
 ## Aufgabe 1
 Wir starten mit einer `Blank Xaml App (Xamarin.Forms Portable)`. Mac: `Forms -> Forms ContentPage Xaml`
 
-![](images\2017-02-27-17-50-06.png)
+![](https://raw.githubusercontent.com/Zuehlke/fhnw-xamarin-workshop/master/Day%202/images/BlankAppTemplate.png)
 
 * Allfällige Windows Phone Projekte entfernen. 
 * Windows: iOS Projekt entfernen
@@ -11,7 +11,7 @@ Wir starten mit einer `Blank Xaml App (Xamarin.Forms Portable)`. Mac: `Forms -> 
 
 Das müsste dann etwa so aussehen:
 
-![](images\2017-02-27-17-54-38.png)
+![](https://raw.githubusercontent.com/Zuehlke/fhnw-xamarin-workshop/master/Day%202/images/SolutionExplorer.png)
 
 Frage 1
 Wenn ihr die Applikation startet kommt der Inhalt von MainPage.xaml. Warum? Versucht herauszufinden welches der Startpunkt eurer Applikation ist und wer MainPage instanziert. [1]
@@ -20,21 +20,21 @@ Wenn ihr die Applikation startet kommt der Inhalt von MainPage.xaml. Warum? Vers
 
 Mit XAML soll folgende App Gebaut werden:
 
-![](images\Aufgabe2.png)
+![](https://raw.githubusercontent.com/Zuehlke/fhnw-xamarin-workshop/master/Day%202/images/Aufgabe2.png)
 
 Tipps:
 * Benutze das `StackLayout`
 * Prüfe die eigenschaften welches ein StackLayout hat (Ctrl + Space drücken während der Cursor im Tag ist: `<StackLayout $CURSOR$>` um die Buttons in der Mitte zu zentrieren.
 
-![](images\intellisense.png)
+![](https://raw.githubusercontent.com/Zuehlke/fhnw-xamarin-workshop/master/Day%202/images/intellisense.png)
 
 * Probiere das StackLayout horizontal zu machen.
 
 Versuche nun dasselbe ohne XAML zu machen. Hierzu fügen wir dem portable project ein neue `Page` hinzu: 
 
-![](images\AddNewFormsPage1.png)
+![](https://raw.githubusercontent.com/Zuehlke/fhnw-xamarin-workshop/master/Day%202/images/AddNewFormsPage1.png)
 
-![](images\AddNewFormsPage2.png)
+![](https://raw.githubusercontent.com/Zuehlke/fhnw-xamarin-workshop/master/Day%202/images/AddNewFormsPage2.png)
 
 > Verwendet bei Pages immer das Suffix `Page` wie z.B. `MySuperPage`
 
@@ -59,14 +59,14 @@ Die nächste Übung zeigt wie man Scrolling implementieren wird. Füge eine neue
 
 Ein Beispiel:
 
-![](images\Aufgabe3Beispiel.png)
+![](https://raw.githubusercontent.com/Zuehlke/fhnw-xamarin-workshop/master/Day%202/images/Aufgabe3Beispiel.png)
 
 Versuche mithilfe der `ScrollView` dein Inhalt scrollbar zu machen. Falls es nicht klappt kann in der [Dokumentation](https://developer.xamarin.com/guides/xamarin-forms/user-interface/layouts/scroll-view/) nachgeschlagen werden.
 
 ## Aufgabe 3b
 Wir wollen nun 2 Buttons unterhalb des `ScrollViews` machen:
 
-![](images\Aufgabe3b.png)
+![](https://raw.githubusercontent.com/Zuehlke/fhnw-xamarin-workshop/master/Day%202/images/Aufgabe3b.png)
 
 Wie kann dies bewerkstelligt werden? Es müsste mit dem bereits erlangtem Wissen machbar sein.
 
