@@ -233,3 +233,49 @@ public class ExerciseSwitcherPage : ContentPage
 	}
 }
 ```
+
+## Aufgabe 5
+### XAML `TippingCalculator.xaml`
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="Excercises.TippingCalculator">
+	<ContentPage.Content>
+		<StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+			<StackLayout Orientation="Horizontal">
+				<Label Text="Betrag" />
+				<Entry Text="" WidthRequest="100" x:Name="entryAmount" />
+			</StackLayout>
+			<StackLayout Orientation="Horizontal">
+				<Label Text="Trinkgeld (%)" />
+				<Entry Text="" WidthRequest="100" x:Name="entryTipping" />
+			</StackLayout>
+			<Button Text="Berechnen" Clicked="Handle_Clicked" />
+			<Label Text="" x:Name="labelTotal" />
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>
+````
+
+### Codebehind `TippingCalculator.xaml.cs`
+```csharp
+public partial class TippingCalculator : ContentPage
+{
+	public TippingCalculator()
+	{
+		InitializeComponent();
+	}
+
+	void Handle_Clicked(object sender, System.EventArgs e)
+	{
+		var amount = double.Parse(entryAmount.Text);
+		var tipping = double.Parse(entryTipping.Text);
+
+		var total = amount + (tipping / 100 * amount);
+
+		labelTotal.Text = "Bezahle " + total + " für " + tipping + "% Trinkgeld.";
+	}
+}
+```
