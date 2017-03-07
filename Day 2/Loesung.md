@@ -201,4 +201,8 @@ Im `App.xaml.cs` muss die `MainPage =` neu gesetzt werden.
 
 Wenn das Device gedreht wird, verschwindet das absolut positionierte Element. Mit den verschachtelten `StackLayouts` passt sich das Layout an das Bildschirmformat an. Interessant ist auch dass nicht alle Devices denselben Formfaktor haben, was die Positinierung mit dem Absolut Layout nur in speziellen Situation zum richtigen Werkzeug macht.
 
+## Frage 4
+Das Layouting übernimmt das `AbsolutLayout` und nicht das Label selbst, darum hat das Label auch keine layoutspezifischen Eigenschaften. 
+
+Dies ermöglicht ein Label auch in einem anderen Layouts wie z.B. ein `GridLayout` zu positionieren, ohne dass das Label etwas vom Layout wissen muss.
 
