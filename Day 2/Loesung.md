@@ -206,3 +206,30 @@ Das Layouting übernimmt das `AbsolutLayout` und nicht das Label selbst, darum h
 
 Dies ermöglicht ein Label auch in einem anderen Layouts wie z.B. ein `GridLayout` zu positionieren, ohne dass das Label etwas vom Layout wissen muss.
 
+## Aufgabe 4
+```csharp
+public class ExerciseSwitcherPage : TabbedPage
+{
+	public ExerciseSwitcherPage()
+	{
+		Children.Add(new Aufgabe2());
+		Children.Add(new Aufgabe3a());
+		Children.Add(new AbsoluteLayout());
+		// ...
+	}
+}
+```
+### Titel
+#### XAML
+`<ContentPage ... Title="Titel der Page">...`
+
+#### C#
+```csharp
+public class ExerciseSwitcherPage : ContentPage
+{
+	public ExerciseSwitcherPage()
+	{
+		Title = "My Title";
+	}
+}
+```
