@@ -234,7 +234,7 @@ public class ExerciseSwitcherPage : ContentPage
 }
 ```
 
-## Aufgabe 5
+## Aufgabe 5: Tipping Calculator
 ### XAML `TippingCalculator.xaml`
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
