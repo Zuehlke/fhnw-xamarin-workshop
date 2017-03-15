@@ -13,7 +13,7 @@
 
 ## Aufgabe 2: Implizite Intents und Eventhandling
 
-![Mockup Aufgabe 2](https://raw.githubusercontent.com/Zuehlke/fhnw-xamarin-workshop/master/Day%204/images/Mockup_Exercise_I.png)
+![Mockup Aufgabe 2](https://github.com/Zuehlke/fhnw-xamarin-workshop/blob/master/Day%204/Images/Mockup_Exercise_I.png?raw=true)
 
 1. Neues Xamarin Android Projekt erstellen 'Fundamentals.ExerciseOne'
 2. Setze das Activity Label der `MainActivity` auf "First App"
@@ -29,7 +29,7 @@ Optional: Löse die Aufgabe mit einem expliziten Intent
 
 ## Aufgabe 3: Long running tasks und ListViews
 
-![Mockup Aufgabe 2](https://raw.githubusercontent.com/Zuehlke/fhnw-xamarin-workshop/master/Day%204/images/Mockup_Exercise_II.png)
+![Mockup Aufgabe 2](https://github.com/Zuehlke/fhnw-xamarin-workshop/blob/master/Day%204/Images/Mockup_Exercise_II.png?raw=true)
 
 ### ListView Basics
 1. Neues Xamarin Android Projekt erstellen 'Fundamentals.ExerciseTwo'
