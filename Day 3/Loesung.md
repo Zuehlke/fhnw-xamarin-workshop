@@ -34,9 +34,10 @@ namespace MusterLoesung
 			};
 		}
 	}
-}```
+}
+```
 
-`RedPage.cs``
+`RedPage.cs`
 ```csharp
 using System;
 
@@ -71,7 +72,7 @@ namespace MusterLoesung
 	}
 }```
 
-`YellowPage.cs``
+`YellowPage.cs`
 ```csharp
 using System;
 
@@ -104,11 +105,13 @@ namespace MusterLoesung
 			};
 		}
 	}
-}```
+}
+```
 
 `App.xaml.cs`:
 ```csharp
-MainPage = new NavigationPage(new BluePage());```
+MainPage = new NavigationPage(new BluePage());
+```
 
 ## Aufgabe 2: TippingCalculator
 
@@ -132,7 +135,7 @@ MainPage = new NavigationPage(new BluePage());```
 </ContentPage>
 ````
 
-`TippingCalculator.xaml.cs``
+`TippingCalculator.xaml.cs`
 ```csharp
 public partial class TippingCalculator : ContentPage
 {
@@ -203,7 +206,7 @@ public class TippingModel : INotifyPropertyChanged
 		}
 	}
 }
-````
+```
 
 ## Aufgabe 3: Simple Todo App
 `TodoModel.cs`:
