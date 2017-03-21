@@ -219,6 +219,93 @@ Wenn das Laden der Daten zu lange dauert kann dies zu einer ANR-Exception führe
 
 2. Lade die Daten mittels Android.OS.AsyncTask
 
+MonkeyLoadAsyncTask
+`    internal class MonkeyLoadAsyncTask : AsyncTask<int, int, IEnumerable<MonkeyDto>>
+    {
+        private readonly AsyncTaskActivity _activity;
+
+        public MonkeyLoadAsyncTask(AsyncTaskActivity activity)
+        {
+            _activity = activity;
+        }
+
+        protected override IEnumerable<MonkeyDto> RunInBackground(params int[] @params)
+        {
+            return MonkeyService.LoadMonkeys(@params[0]);
+        }
+
+        protected override void OnPostExecute(IEnumerable<MonkeyDto> result)
+        {
+            var monkeyDtos = result as IList<MonkeyDto> ?? result.ToList();
+            base.OnPostExecute(monkeyDtos);
+            _activity.SetListAdapter(monkeyDtos);
+            _activity.SetBusy(false);
+         
+        }`
+
+AsyncTaskActivity
+
+`   [Activity(Label = "Async Task")]
+    public class AsyncTaskActivity : Activity
+    {
+        private const string MonkeysBundleKey = "monkeys";
+        private readonly List<MonkeyDto> _monkeyDtos = new List<MonkeyDto>();
+
+        private Button _getMonkeys;
+        private ListView _monkeyList;
+        private ProgressDialog _progressDialog;
+        private MonkeyLoadAsyncTask _monkeyLoadAsyncTask;
+
+        protected override void OnCreate(Bundle bundle)
+        {
+            base.OnCreate(bundle);
+
+            SetContentView(Resource.Layout.Basic);
+
+
+            _getMonkeys = FindViewById<Button>(Resource.Id.basic_button_getmonkeys);
+            _monkeyList = FindViewById<ListView>(Resource.Id.basic_list_monkeys);
+            _monkeyLoadAsyncTask = new MonkeyLoadAsyncTask(this);
+
+            _progressDialog = new ProgressDialog(this);
+            _progressDialog.SetMessage("Please wait...");
+            _progressDialog.SetCancelable(false);
+
+            if (bundle != null)
+                SetListAdapter(JsonConvert.DeserializeObject<List<MonkeyDto>>(bundle.GetString(MonkeysBundleKey)));
+       
+
+            _getMonkeys.Click += (sender, args) =>
+            {
+                SetBusy(true);
+                _monkeyLoadAsyncTask.Execute(1000);
+            };
+        }
+
+        public void SetBusy(bool isBusy)
+        {
+            if (isBusy)
+                _progressDialog.Show();
+            else
+                _progressDialog.Cancel();
+        }
+
+        public void SetListAdapter(IEnumerable<MonkeyDto> monkeyDtos)
+        {
+            var monkeyAsStrings = monkeyDtos.Select(_ => _.Name).ToList();
+            var listAdapter = new ArrayAdapter<string>(this,
+                Android.Resource.Layout.SimpleListItem1,
+                monkeyAsStrings);
+
+            _monkeyList.Adapter = listAdapter;
+        }
+
+        protected override void OnSaveInstanceState(Bundle outState)
+        {
+            outState.PutString(MonkeysBundleKey, JsonConvert.SerializeObject(_monkeyDtos));
+            base.OnSaveInstanceState(outState);
+        }
+    }`
 
 3. Lade die Daten mittels System.Threading.Task
 
@@ -291,4 +378,8 @@ Wenn das Laden der Daten zu lange dauert kann dies zu einer ANR-Exception führe
 
 4. Was sind die Unterschidede zwischen den beiden Varianten ? Welche Vor/ Nachteile haben diese ? 
 
+Async Task bietet die Möglichkeit progress zu melden, und eine finalen UI update zu machen.
+
 5. Was ist die Abgrenzung zu einem BoundService / IntentService ?
+
+Ein BoundService kann für eine Client / Server Interaktion verwendet werden. Bei einem IntentService wird einen Queue von Tasks befüllt. Beide machen aber wenig Sinn um sie für einen REST Http call zu verwenden.
