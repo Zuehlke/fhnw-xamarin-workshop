@@ -11,14 +11,14 @@
     3. App wieder in den Vordergrund kommt
 
 
-## Aufgabe 2: Implizite Intents und Eventhandling
+## Aufgabe 2: Explizite Intents und Eventhandling
 
 ![Mockup Aufgabe 2](https://github.com/Zuehlke/fhnw-xamarin-workshop/blob/master/Day%204/Images/Mockup_Exercise_I.png?raw=true)
 
 1. Neues Xamarin Android Projekt erstellen 'Fundamentals.ExerciseOne'
 2. Setze das Activity Label der `MainActivity` auf "First App"
 3. Füge dem MainActivity Layout den Button `Go to Activity 2` hinzu
-    - Implementiere einen `implicit intent`
+    - Implementiere einen `explicit intent`
 4. Erstelle eine neue Activity `ToastActivity`
 5. Erstelle ein dazugehöriges Android Layout `.axml`
     1. Platziere die `TextView` sowie eine `ButtonView`
@@ -154,16 +154,11 @@ Optional: Löse die Aufgabe mit einem expliziten Intent
 
 Um einen App responsive zu halten kennt Android eine ANR- Excpetion [ANR](https://developer.android.com/training/articles/perf-anr.html#Avoiding) 
 1. Wie könnte dies bei der Basic Implementation zum Problem werden ?
-1. Lade die Daten mittels Android.OS.AsyncTask
-2. Lade die Daten mittels System.Threading.Task
+2. Lade die Daten mittels Android.OS.AsyncTask
+3. Lade die Daten mittels System.Threading.Task
 4. Was sind die Unterschidede zwischen den beiden Varianten ? Welche Vor/ Nachteile haben diese ? 
 5. Was ist die Abgrenzung zu einem BoundService / IntentService ?
 
-<!--### UI verschönnerung
-
-1. Erstelle einen eigenen ArrayAdapter<MonkeyDto>
-2. second
-3. third-->
 
 ## Referenzen 
 1. First place to go [ Xamarin Android Guides](https://developer.xamarin.com/guides/android/)
