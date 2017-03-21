@@ -39,6 +39,8 @@
 
 ## Aufgabe 2: Databinding 5' min
 
+![](images/Ex_I.png)
+
 1. Erstelle ein Property `public string BindingDemo` ( mit Backing Field & RaisePropertyChanged) 
 
 2. Android Layout erstellen für die `MainActivity`
@@ -51,6 +53,8 @@
 
 ## Aufgabe 3: Commands 5'min
 
+![](images/Ex_II.png)
+
 1. Command erstellen für Button Click
     - erstelle im `MainViewModel` ein Property (`MvxCommand`) für den Button Command
 
@@ -60,6 +64,8 @@
     - `Debug.WriteLine("TEST XXX");`
 
 ## Aufgabe 4: Navigation 5'min
+
+![](images/Ex_III.png)
 
 1. Neue Activity erstellen
     - Erstelle eine `StudentActivity`
@@ -75,16 +81,18 @@
 3. NavigateTo
     - Implementiere den Button Click im `MainViewModel` so, dass er das StudentViewModel anzeigt.
 
-<!-- Maybe use only student and grade vm-->
+<!-- Maybe use only student and grade vm -->
 
 ## Aufgabe 5: ListViews für Courses 15'min
+
+![](images/Ex_IV.png)
 
 1. Eigenes Property `public ObservableCollection<Course> Courses` im `StudentViewModel` erstellen. 
     - RaisePropertyChanged()
     - Nur einmal new MvxObserableCollection(...)
 
 2. ListView im `Student.axml` ergänzen
-    - <Mvx.MvxListView ...
+    - <Mvx.MvxListView ... (siehe Slides)
     - xmlns nicht vergessen
 
 3. List item template für Coure erstellen und im `Student.axml` referenzieren
@@ -98,17 +106,26 @@
     - `MvxCommand<Course>` damit erhält man den Parameter !
     - `ShowViewModel<T>()`
 
-## Aufgabe 6: IoC und Services 15'min
+<!-- TODO templates for grade vm and service + repo -->
 
-1. Interface für eigenen Service
+## Aufgabe 6: IoC und Converter 15'min
 
-2. Implementation Android und IOS
+![](images/Ex_V.png)
 
-3. Registrieren
+1. Kopiere das [Repository](templates/repositories) in die PCL in den Folder `Repository` (muss erstellt werden).
 
-4. Resolve
+2. Kopiere den [Converter](templates/converters) in die PCL in den Folder `Converters` (muss erstellt werden).
 
-<!--## Aufgabe 6: Plugins
+2. Registriere das Repository im IoC Container 
+    - In der Klasse `App` in der Methode ` public override void Initialize()` 
+
+3. Verwende das Repository im `StudentViewModel` um die Studenten-Daten zugelangen
+    - Typ Constructor Injection
+
+4. Implementiere die ListView für das `GradeViewModel` mit entsprechendem Item template.
+    - Beachte beim erstellen des Templates, dass der `GradeAchievedToTextConverter` eingebunden werden soll
+ 
+<!--## Aufgabe 7: Plugins
 Allenfalls noch einen FileService, DialogService pro Plattform
 -->
 
