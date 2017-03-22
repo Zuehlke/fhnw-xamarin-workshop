@@ -120,7 +120,9 @@
     - In der Klasse `App` in der Methode ` public override void Initialize()` 
 
 3. Verwende das Repository im `StudentViewModel` um die Studenten-Daten zugelangen
-    - Typ Constructor Injection
+    - Tipp Constructor Injection
+4. Implementieren einen `AddGradeCommand` welcher nur aktiv ist wenn etwas im Input-Feld (EditText) eigegeben wurde.
+    - Tipp CanExecute
 
 4. Implementiere die ListView für das `GradeViewModel` mit entsprechendem Item template.
     - Beachte beim erstellen des Templates, dass der `GradeAchievedToTextConverter` eingebunden werden soll
