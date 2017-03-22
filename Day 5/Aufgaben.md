@@ -39,7 +39,7 @@
 
 ## Aufgabe 2: Databinding 5' min
 
-![](Images/Ex_I.png)
+![](images/Ex_I.png)
 
 1. Erstelle ein Property `public string BindingDemo` ( mit Backing Field & RaisePropertyChanged) 
 
@@ -53,7 +53,7 @@
 
 ## Aufgabe 3: Commands 5'min
 
-![](Images/Ex_II.png)
+![](images/Ex_II.png)
 
 1. Command erstellen für Button Click
     - erstelle im `MainViewModel` ein Property (`MvxCommand`) für den Button Command
@@ -65,7 +65,7 @@
 
 ## Aufgabe 4: Navigation 5'min
 
-![](Images/Ex_III.png)
+![](images/Ex_III.png)
 
 1. Neue Activity erstellen
     - Erstelle eine `StudentActivity`
@@ -85,7 +85,7 @@
 
 ## Aufgabe 5: ListViews für Courses 15'min
 
-![](Images/Ex_IV.png)
+![](images/Ex_IV.png)
 
 1. Eigenes Property `public ObservableCollection<Course> Courses` im `StudentViewModel` erstellen. 
     - RaisePropertyChanged()
@@ -110,7 +110,7 @@
 
 ## Aufgabe 6: IoC und Converter 15'min
 
-![](Images/Ex_V.png)
+![](images/Ex_V.png)
 
 1. Kopiere das [Repository](templates/repositories) in die PCL in den Folder `Repository` (muss erstellt werden).
 
@@ -124,7 +124,7 @@
 4. Implementieren einen `AddGradeCommand` welcher nur aktiv ist wenn etwas im Input-Feld (EditText) eigegeben wurde.
     - Tipp CanExecute
 
-4. Implementiere die ListView für das `GradeViewModel` mit entsprechendem Item template.
+5. Implementiere die ListView für das `GradeViewModel` mit entsprechendem Item template.
     - Beachte beim erstellen des Templates, dass der `GradeAchievedToTextConverter` eingebunden werden soll
  
 <!--## Aufgabe 7: Plugins
