@@ -50,6 +50,7 @@
 3. Layout in Activity Laden indem `SetContentView` 
 
 4. Erstelle ein `TwoWay` Binding auf das Property `BindingDemo` (Tipp: xmlns deklaration nicht vergessen)
+    - xmlns:local="http://schemas.android.com/apk/res/Mvx.Exercises.Android" 
 
 ## Aufgabe 3: Commands 5'min
 
