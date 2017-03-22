@@ -2,7 +2,7 @@
 
 ## Aufgabe 1: Projekt initialisieren 10'min
 
-1. File => New => C# => Crossplattform => Nativ or Forms App
+1. File => New => C# => Crossplattform => Native or Forms App (Visual Studio) oder Native (Xamarin Studio)
 
 ![](Images/ProjectSelection.PNG)
 
@@ -39,7 +39,7 @@
 
 ## Aufgabe 2: Databinding 5' min
 
-![](images/Ex_I.png)
+![](Images/Ex_I.png)
 
 1. Erstelle ein Property `public string BindingDemo` ( mit Backing Field & RaisePropertyChanged) 
 
@@ -53,7 +53,7 @@
 
 ## Aufgabe 3: Commands 5'min
 
-![](images/Ex_II.png)
+![](Images/Ex_II.png)
 
 1. Command erstellen für Button Click
     - erstelle im `MainViewModel` ein Property (`MvxCommand`) für den Button Command
@@ -85,7 +85,7 @@
 
 ## Aufgabe 5: ListViews für Courses 15'min
 
-![](images/Ex_IV.png)
+![](Images/Ex_IV.png)
 
 1. Eigenes Property `public ObservableCollection<Course> Courses` im `StudentViewModel` erstellen. 
     - RaisePropertyChanged()
@@ -110,7 +110,7 @@
 
 ## Aufgabe 6: IoC und Converter 15'min
 
-![](images/Ex_V.png)
+![](Images/Ex_V.png)
 
 1. Kopiere das [Repository](templates/repositories) in die PCL in den Folder `Repository` (muss erstellt werden).
 
