@@ -13,24 +13,30 @@
 5. Im Shared Projekt (PCL)
     - Erstelle eine Klasse 'App'
     
-     `public class App : MvxApplication`
+     ```csharp
+      public class App : MvxApplication
+     ```
     - Erstelle eine Klasse 'AppStart'
     
-    `public class AppStart : MvxNavigatingObject, IMvxAppStart`
+    ```csharp
+    public class AppStart : MvxNavigatingObject, IMvxAppStart
+    ```
     - Erstelle einen Folder `ViewModels`
     - Erstelle darin eine Klasse 'MainViewModel'
     
-     `public class MainViewModel : MvxViewModel`
+     ```csharp
+     public class MainViewModel : MvxViewModel
+     ```
 
 6. Im Android Projekt
     - Lösche die `MainActivity`
     - Erstelle einen Folder `Views`
     - Erstelle die Klasse 'MainActivity'
 
-`
+    ```csharp
     [Activity(Label = "Students App", MainLauncher = true)]
     public class MainActivity : MvxActivity<MainViewModel>
-    `
+    ```
 
 7. Erstelle in der PCL einen Ordner `Models`
 
@@ -50,7 +56,7 @@
 3. Layout in Activity Laden indem `SetContentView` 
 
 4. Erstelle ein `TwoWay` Binding auf das Property `BindingDemo` (Tipp: xmlns deklaration nicht vergessen)
-    - xmlns:local="http://schemas.android.com/apk/res/Mvx.Exercises.Android" 
+    - xmlns:local="http://schemas.android.com/apk/res/{YourProjec}" 
 
 ## Aufgabe 3: Commands 5'min
 
@@ -60,9 +66,14 @@
     - erstelle im `MainViewModel` ein Property (`MvxCommand`) für den Button Command
 
 2. Binding erstellen
-    - Erstelle das Binding für den Click-Handler des Buttons `local:MvxBind=Click MyProperty`
+    - Erstelle das Binding für den Click-Handler des Buttons 
+    ```xml
+    local:MvxBind=Click MyProperty
+    ```
 3. Implementiere den Command 
-    - `Debug.WriteLine("TEST XXX");`
+    ```csharp 
+    Debug.WriteLine("TEST XXX");
+    ```
 
 ## Aufgabe 4: Navigation 5'min
 
@@ -74,7 +85,7 @@
 
 2. ViewModel erstellen
     - Erstelle ein neuse `StudentViewModel`
-    - Intialisiere ein Propert `CurrentStudent` vom Typ `Student`
+    - Intialisiere ein Property `CurrentStudent` vom Typ `Student`
 
 3. Bindings erstellen
     - Erstelle ein Binding für `Id` und `Name`
@@ -82,7 +93,6 @@
 3. NavigateTo
     - Implementiere den Button Click im `MainViewModel` so, dass er das StudentViewModel anzeigt.
 
-<!-- Maybe use only student and grade vm -->
 
 ## Aufgabe 5: ListViews für Courses 15'min
 
@@ -106,8 +116,6 @@
 5. Navigiere im erstellten Click-Handler auf das `GradesViewModel`
     - `MvxCommand<Course>` damit erhält man den Parameter !
     - `ShowViewModel<T>()`
-
-<!-- TODO templates for grade vm and service + repo -->
 
 ## Aufgabe 6: IoC und Converter 15'min
 

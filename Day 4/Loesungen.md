@@ -64,7 +64,7 @@
 ## Aufgabe 2: Implizite Intents und Eventhandling
 
 Main.axml
-`
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
@@ -79,10 +79,11 @@ Main.axml
         android:layout_height="wrap_content"
         android:id="@+id/main_button_gotoactivity" />
 </LinearLayout>
-`
+```
 
 MainActiviy.cs
-`    [Activity(Label = "@string/ApplicationName", MainLauncher = true, Icon = "@drawable/icon")]
+```csharp
+    [Activity(Label = "@string/ApplicationName", MainLauncher = true, Icon = "@drawable/icon")]
     public class MainActivity : Activity
     {
         protected override void OnCreate(Bundle bundle)
@@ -98,10 +99,11 @@ MainActiviy.cs
                 StartActivity(startToastIntent);
             };
         }
-    }`
+    }
+```
 
 Toast.axml
-`
+``` xml
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
@@ -117,10 +119,10 @@ Toast.axml
         android:layout_height="wrap_content"
         android:text="@string/toast_showalert" />
 </LinearLayout>
-`
+```
 
 ToastActiviy.cs
-`
+```csharp
     [Activity(Label = "...")]
     public class ToastActivity : Activity
     {
@@ -141,13 +143,13 @@ ToastActiviy.cs
             };
         }
     }
-`
+```
 
 ## Aufgabe 3: Long running tasks und ListViews
 
 Basic.axml
-
-`<?xml version="1.0" encoding="utf-8"?>
+```xml
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
@@ -165,11 +167,12 @@ Basic.axml
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/basic_list_monkeys" />
-</LinearLayout>`
+</LinearLayout>
+```
 
 BasicActivity.cs
-
-` [Activity(Label = "Basic simple list")]
+```csharp
+     [Activity(Label = "Basic simple list")]
     public class BasicActivity : Activity
     {
         private const string MonkeysBundleKey = "monkeys";
@@ -213,7 +216,8 @@ BasicActivity.cs
             outState.PutStringArray(MonkeysBundleKey, _monkeyAsStrings.ToArray());
             base.OnSaveInstanceState(outState);
         }
-    }`
+    }
+```
 
 1. Wie könnte dies bei der Basic Implementation zum Problem werden ?
 Wenn das Laden der Daten zu lange dauert kann dies zu einer ANR-Exception führen. Dies führt zu schlechten Reviews für eine App obwohl die Gründe nicht zwigend darin ligen z.B. Latenz beim Zugriff auf die externe Resource.
@@ -222,7 +226,8 @@ Wenn das Laden der Daten zu lange dauert kann dies zu einer ANR-Exception führe
 2. Lade die Daten mittels Android.OS.AsyncTask
 
 MonkeyLoadAsyncTask
-`    internal class MonkeyLoadAsyncTask : AsyncTask<int, int, IEnumerable<MonkeyDto>>
+```csharp
+    internal class MonkeyLoadAsyncTask : AsyncTask<int, int, IEnumerable<MonkeyDto>>
     {
         private readonly AsyncTaskActivity _activity;
 
@@ -243,11 +248,13 @@ MonkeyLoadAsyncTask
             _activity.SetListAdapter(monkeyDtos);
             _activity.SetBusy(false);
          
-        }`
+        }
+```
 
 AsyncTaskActivity
 
-`   [Activity(Label = "Async Task")]
+```csharp
+    [Activity(Label = "Async Task")]
     public class AsyncTaskActivity : Activity
     {
         private const string MonkeysBundleKey = "monkeys";
@@ -307,11 +314,13 @@ AsyncTaskActivity
             outState.PutString(MonkeysBundleKey, JsonConvert.SerializeObject(_monkeyDtos));
             base.OnSaveInstanceState(outState);
         }
-    }`
+    }
+```
 
 3. Lade die Daten mittels System.Threading.Task
 
-`  [Activity(Label = "Async and advanced stuff")]
+```csharp
+    [Activity(Label = "Async and advanced stuff")]
     public class AdvancedActivity : Activity
     {
         private const string MonkeysBundleKey = "monkeys";
@@ -376,7 +385,8 @@ AsyncTaskActivity
             outState.PutStringArray(MonkeysBundleKey, _monkeyAsStrings.ToArray());
             base.OnSaveInstanceState(outState);
         }
-    }`
+    }
+```
 
 4. Was sind die Unterschidede zwischen den beiden Varianten ? Welche Vor/ Nachteile haben diese ? 
 
