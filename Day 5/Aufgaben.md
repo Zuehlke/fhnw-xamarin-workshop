@@ -1,6 +1,6 @@
 # Aufgabe Day 5 Mvvm mit Mvvm Cross
 
-## Aufgabe 1: Projekt initialisieren 10'min
+## Aufgabe 1: Projekt initialisieren 15'min
 
 1. File => New => C# => Crossplattform => Native or Forms App (Visual Studio) oder Native (Xamarin Studio)
 
@@ -43,7 +43,7 @@
 8. Kopiere die zur Verfügung gestellten Klassen [Model Klassen](templates/models) in die PCL Assembly in den Ordner `Models`
 
 
-## Aufgabe 2: Databinding 5' min
+## Aufgabe 2: Databinding 10' min
 
 ![](Images/Ex_I.png)
 
@@ -58,7 +58,7 @@
 4. Erstelle ein `TwoWay` Binding auf das Property `BindingDemo` (Tipp: xmlns deklaration nicht vergessen)
     - xmlns:local="http://schemas.android.com/apk/res/{YourProjec}" 
 
-## Aufgabe 3: Commands 5'min
+## Aufgabe 3: Commands 10'min
 
 ![](Images/Ex_II.png)
 
@@ -75,7 +75,7 @@
     Debug.WriteLine("TEST XXX");
     ```
 
-## Aufgabe 4: Navigation 5'min
+## Aufgabe 4: Navigation 10'min
 
 ![](images/Ex_III.png)
 
@@ -94,7 +94,7 @@
     - Implementiere den Button Click im `MainViewModel` so, dass er das StudentViewModel anzeigt.
 
 
-## Aufgabe 5: ListViews für Courses 15'min
+## Aufgabe 5: ListViews für Courses 20'min
 
 ![](Images/Ex_IV.png)
 
