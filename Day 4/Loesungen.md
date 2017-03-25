@@ -4,7 +4,8 @@
 
 [Nachlesen ](https://developer.xamarin.com/guides/android/application_fundamentals/activity_lifecycle/saving_state_walkthrough/)
 
-`  [Activity(Label = "Intro", MainLauncher = true, Icon = "@drawable/icon")]
+```csharp
+[Activity(Label = "Intro", MainLauncher = true, Icon = "@drawable/icon")]
     public class MainActivity : Activity
     {
        
@@ -57,7 +58,8 @@
 
              Log.Debug(GetType().FullName,"OnPause executed, no more available");
         }
-    }`
+    }
+```
 
 ## Aufgabe 2: Implizite Intents und Eventhandling
 
