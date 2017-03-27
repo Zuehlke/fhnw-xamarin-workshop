@@ -77,7 +77,7 @@
 
 ## Aufgabe 4: Navigation 10'min
 
-![](images/Ex_III.png)
+![](Images/Ex_III.png)
 
 1. Neue Activity erstellen
     - Erstelle eine `StudentActivity`
