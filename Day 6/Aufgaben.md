@@ -168,7 +168,7 @@ public Command(Action execute, Func<bool> canExecute)
 ## Aufgabe 3 Constructor Injection mit Forms
 1. Erstelle den Folder `Repositories`
 
-2. Extrahiere `TodoRepository` Klasse aus Viewmodel (3min)
+2. Extrahiere eine `TodoRepository` Klasse aus dem TodoViewModel mit den folgenden Methoden
 ```csharp
     IEnumerable<Todo> GetAll();
     void Add(string todo);
@@ -179,7 +179,7 @@ public Command(Action execute, Func<bool> canExecute)
 ```csharp
     _repository.Add(TodoText);
 ```
-- Um die Todos zu "laden"
+- Um die Todos zu "laden" (Tipp wann müssen die Daten neu geladen werden ? )
 ```csharp
     private void LoadData()
     {
@@ -198,7 +198,8 @@ public Command(Action execute, Func<bool> canExecute)
 2. Extrahiere ein Interface `ITodoRepository`
     - lasse das `TodoRepository` das Interface implementieren
     
-3. Registriere das Repository im Mvx IoC Container in der `App.Initialize`
+3. Registriere das Repository im Mvx IoC Container in der `App.Initialize`,
+   welche Registrierungsart verwendest du ? und weshalb ?
 
 ```csharp
   MvvmCross.Platform.Mvx.Register ....
