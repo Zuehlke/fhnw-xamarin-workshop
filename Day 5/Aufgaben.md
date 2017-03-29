@@ -109,15 +109,15 @@
 3. List item template für Coure erstellen und im `Student.axml` referenzieren
     - Binding im Context eines `Course` Objektes z.B. local:MvxBind=Text Id
 
-4. Binding auf `Source MyObservableCollection` und `ItemClick MyCommand` erstellen
+4. Binding auf `Source MyObservableCollection`
 
-5. Erstelle eine `GradesActivity` + Layout und ein `GradesViewModel`
+<!--5. Erstelle eine `GradesActivity` + Layout und ein `GradesViewModel`
 
 5. Navigiere im erstellten Click-Handler auf das `GradesViewModel`
     - `MvxCommand<Course>` damit erhält man den Parameter !
-    - `ShowViewModel<T>()`
+    - `ShowViewModel<T>()`-->
 
-## Aufgabe 6: IoC und Converter 15'min
+<!--## Aufgabe 6: IoC und Converter 15'min
 
 ![](Images/Ex_V.png)
 
@@ -138,7 +138,7 @@
  
 <!--## Aufgabe 7: Plugins
 Allenfalls noch einen FileService, DialogService pro Plattform
--->
+-->-->
 
 
 

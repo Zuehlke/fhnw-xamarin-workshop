@@ -468,6 +468,42 @@ Resources\Layout\Student.axml
     local:MvxBind="ItemsSource Courses;ItemClick ShowGrades" />
 </LinearLayout>
 ```
+Resources\Layout\course_list_item.axml
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res/Mvx.Exercises.AndroidTest"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp">
+    <TextView
+        android:id="@+id/course_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingRight="15dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Course" />
+    <TextView
+        android:id="@+id/course_title_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:paddingRight="15dp"
+        android:text="..."
+        local:MvxBind="Text Name"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/course_teacher"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="..."
+        local:MvxBind="Text Teacher"
+        android:textStyle="italic"
+        android:textColor="@android:color/holo_blue_dark" />
+</LinearLayout>
+```
 
 ### Im PCL Projekt 
 
@@ -566,9 +602,3 @@ namespace Mvx.Exercises.ViewModels
     }
 }
 ```
-
-To be continued ...
-
-## Aufgabe 6: IoC und Converter
-
-To be continued ...
